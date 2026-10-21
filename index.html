@@ -1,4 +1,10 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>Steven Estafanos Portfolio</title>
+<meta name="description" content="Architecture portfolio of Steven Estafanos, Architectural Technician in Ottawa: working drawings in AutoCAD and Revit, design studio projects, sketches and photography.">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,400&family=Nunito+Sans:opsz,wght@6..12,300;6..12,400;6..12,500;6..12,600&display=swap">
 <script>(function(){var nav;try{var e=performance.getEntriesByType("navigation")[0];nav=e&&e.type;}catch(x){}try{history.scrollRestoration="manual";}catch(x){}var K="sy:"+location.pathname+location.search,back=nav==="back_forward",y=0,touched=false,st;if(back){try{y=+sessionStorage.getItem(K)||0;}catch(x){}}
 function go(){if(touched)return;if(back||!location.hash){if(Math.abs(window.scrollY-y)>2)window.scrollTo(0,y);}}
@@ -9,6 +15,8 @@ function save(){try{sessionStorage.setItem(K,String(window.scrollY));}catch(x){}
 addEventListener("scroll",function(){clearTimeout(st);st=setTimeout(save,120);},{passive:true});addEventListener("pagehide",save);})();</script>
 <link rel="stylesheet" href="css/style.css"><script src="js/protect.js"></script><script src="js/brand.js" defer></script>
 <link rel="stylesheet" href="css/home.css">
+</head>
+<body>
 <div class="wrap">
   <header class="top">
     <a class="name" href="index.html" aria-label="Steven Estafanos, Architecture Portfolio: home"><span>Steven Estafanos</span><small>Architecture Portfolio</small></a>
@@ -141,3 +149,5 @@ fetch('data/photography.json').then(function(r){return r.json();}).then(function
     a.appendChild(im);g.appendChild(a);});
 }).catch(function(){});
 </script>
+</body>
+</html>
