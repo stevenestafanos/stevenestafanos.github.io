@@ -1,0 +1,241 @@
+[
+ {
+  "src": "media/photography/02-parliament.jpg",
+  "w": 1707,
+  "h": 2560,
+  "caption": "Peace Tower, Centre Block, Parliament of Canada, Ottawa, ON",
+  "date": "Sep 2015",
+  "alt": "Looking up at a stained-glass window and the carved stone vault of the Peace Tower interior, Centre Block"
+ },
+ {
+  "src": "media/photography/01-vault.jpg",
+  "w": 2560,
+  "h": 1707,
+  "caption": "Notre-Dame Cathedral Basilica, Ottawa, ON",
+  "date": "Oct 2015",
+  "alt": "Gothic vaulted ceiling with navy panels and gold ribs, photographed from below"
+ },
+ {
+  "src": "media/photography/29-nave.jpg",
+  "w": 1707,
+  "h": 2560,
+  "caption": "Notre-Dame Cathedral Basilica, Ottawa, ON",
+  "date": "Oct 2015",
+  "alt": "Long nave seen down the central aisle, with a patterned tile floor, wooden pews and a blue vaulted ceiling picked out in gold"
+ },
+ {
+  "src": "media/photography/06-turret.jpg",
+  "w": 2560,
+  "h": 1707,
+  "caption": "Château Laurier, Ottawa, ON",
+  "date": "Apr 2015",
+  "alt": "Stone façade with a turret and steep roofs against a blue sky"
+ },
+ {
+  "src": "media/photography/17-corridor.jpg",
+  "w": 1920,
+  "h": 2560,
+  "caption": "Château Laurier, Ottawa, ON",
+  "date": "Aug 2026",
+  "alt": "Vaulted, gilded corridor with a chandelier and patterned carpet"
+ },
+ {
+  "src": "media/photography/16-west-block.jpg",
+  "w": 1920,
+  "h": 2560,
+  "caption": "West Block, Parliament Hill, Ottawa, ON",
+  "date": "Aug 2026",
+  "alt": "Glazed timber-and-steel atrium roof over a walkway between stone walls"
+ },
+ {
+  "src": "media/photography/04-brick.jpg",
+  "w": 2560,
+  "h": 1440,
+  "caption": "Scottish Ontario Chambers, Sparks Street, Ottawa, ON",
+  "date": "Oct 2015",
+  "alt": "Red-brick Victorian façade with arched windows and decorated brick pilasters, seen looking up from street level under a blue sky, a flag at the roofline",
+  "row": "sparks"
+ },
+ {
+  "src": "media/photography/36-bank.jpg",
+  "w": 2560,
+  "h": 1440,
+  "caption": "Bank of Canada, Sparks Street, Ottawa, ON",
+  "date": "Mar 2015",
+  "alt": "Looking up at a patinated copper-green frame with a glass curtain wall reflecting white clouds",
+  "row": "sparks"
+ },
+ {
+  "src": "media/photography/38-canal-pavilion.jpg",
+  "w": 2560,
+  "h": 1707,
+  "caption": "1 Wellington Street, Ottawa, ON",
+  "date": "Apr 2015",
+  "alt": "Stone-framed glass pavilion beside the Rideau Canal, with a row of globe lamp posts along a balustrade and the Château Laurier at left, under a blue sky with clouds"
+ },
+ {
+  "src": "media/photography/31-national-gallery.jpg",
+  "w": 2560,
+  "h": 1707,
+  "caption": "National Gallery of Canada, Ottawa, ON",
+  "date": "Apr 2015",
+  "alt": "Glass pyramid roof of a gallery against a deep blue sky with white clouds"
+ },
+ {
+  "src": "media/photography/05-museum.jpg",
+  "w": 1707,
+  "h": 2560,
+  "caption": "Canadian Museum of History, Gatineau, QC",
+  "date": "Apr 2015",
+  "alt": "Black-and-white view of the curved stone walls and copper-clad dome of the museum"
+ },
+ {
+  "src": "media/photography/11-door-brick.jpg",
+  "w": 1920,
+  "h": 2560,
+  "caption": "McMaster University, Hamilton, ON",
+  "date": "Jun 2026",
+  "alt": "Limestone Tudor-arch door surround in red brick, with a lantern on axis"
+ },
+ {
+  "src": "media/photography/12-door-gable.jpg",
+  "w": 1920,
+  "h": 2560,
+  "caption": "McMaster University, Hamilton, ON",
+  "date": "Jun 2026",
+  "alt": "Gabled red-brick entrance with arched door, seen along the approach path"
+ },
+ {
+  "src": "media/photography/30-door-montreal.jpg",
+  "w": 1707,
+  "h": 2560,
+  "caption": "Hôtel de Ville, Montreal, QC",
+  "date": "Dec 2017",
+  "alt": "Arched gilded double doors in a stone portal inscribed Hôtel de Ville, at the top of a snowy flight of steps with a railing"
+ },
+ {
+  "src": "media/photography/25-city-hall-towers.jpg",
+  "w": 2560,
+  "h": 1440,
+  "caption": "City Hall, Toronto, ON",
+  "date": "Sep 2015",
+  "alt": "Looking up between the two curved towers of Toronto City Hall, with dark stone podium planes and reflective glazing against a blue sky"
+ },
+ {
+  "src": "media/photography/35-abstract-fold.jpg",
+  "w": 1440,
+  "h": 2560,
+  "caption": "City Hall, Toronto, ON",
+  "date": "Sep 2015",
+  "alt": "Ribbed tower shaft rising against a blue sky beside the curve of the second tower"
+ },
+ {
+  "src": "media/photography/34-abstract-blue.jpg",
+  "w": 2560,
+  "h": 1707,
+  "caption": "City Hall, Toronto, ON",
+  "date": "Sep 2015",
+  "alt": "Ribbed pale concrete tower wall curving up against a saturated blue sky"
+ },
+ {
+  "src": "media/photography/26-sharp-centre.jpg",
+  "w": 2560,
+  "h": 1707,
+  "caption": "Sharp Centre for Design, Toronto, ON",
+  "date": "Sep 2015",
+  "alt": "A checkered box raised on coloured stilts over a heritage house at a street corner"
+ },
+ {
+  "src": "media/photography/27-sharp-facade.jpg",
+  "w": 2560,
+  "h": 947,
+  "caption": "Sharp Centre for Design, Toronto, ON",
+  "date": "Sep 2015",
+  "alt": "Black and white checkered cladding of a box raised on stilts, in blue-tinted panels, cropped to a wide band"
+ },
+ {
+  "src": "media/photography/28-pavilion.jpg",
+  "w": 1440,
+  "h": 2560,
+  "caption": "Rosalie Sharp Pavilion, Toronto, ON",
+  "date": "Sep 2015",
+  "alt": "Red stucco facade with a teal sign and a tall window, in muted colour",
+  "pair": "contrast",
+  "row": "toronto"
+ },
+ {
+  "src": "media/photography/15-window.jpg",
+  "w": 1500,
+  "h": 2000,
+  "caption": "The Well, Toronto, ON",
+  "date": "May 2026",
+  "alt": "Tall corner window framing a view over Toronto from a dim office corridor",
+  "pair": "contrast",
+  "row": "toronto"
+ },
+ {
+  "src": "media/photography/08-skyline.jpg",
+  "w": 2048,
+  "h": 1365,
+  "caption": "Toronto, ON",
+  "date": "Jul 2013",
+  "alt": "Toronto skyline at night, seen from above, with lit towers and a bright street running below",
+  "row": "toronto"
+ },
+ {
+  "src": "media/photography/03-village.jpg",
+  "w": 2560,
+  "h": 1440,
+  "caption": "Promenade des Lauriers, Tremblant, QC",
+  "date": "Sep 2021",
+  "alt": "Tremblant village at blue hour, with colourful roofs, balconies and lit street lamps"
+ },
+ {
+  "src": "media/photography/20-burj-khalifa.jpg",
+  "w": 640,
+  "h": 960,
+  "caption": "Burj Khalifa, Dubai, UAE",
+  "date": "Feb 2013",
+  "alt": "The upper tower of the Burj Khalifa against a dark, broken cloud sky, with the sun flashing on its glass"
+ },
+ {
+  "src": "media/photography/32-boardwalk.jpg",
+  "w": 1920,
+  "h": 2560,
+  "caption": "Ocean City Boardwalk, NJ",
+  "date": "Jul 2026",
+  "alt": "A lamp post, benches and a lone seated figure on a boardwalk, with the ocean beyond under a clear blue sky"
+ },
+ {
+  "src": "media/photography/18-market-hall.jpg",
+  "w": 1920,
+  "h": 2560,
+  "caption": "ByWard Market, Ottawa, ON",
+  "date": "Aug 2026",
+  "alt": "Long timber-and-steel roof over a market hall, seen from above"
+ },
+ {
+  "src": "media/photography/21-station.jpg",
+  "w": 2560,
+  "h": 1440,
+  "caption": "Train Station, Ottawa, ON",
+  "date": "Oct 2015",
+  "alt": "Wide station concourse under a black steel truss roof, with a circular ticket rotunda on axis and a polished concrete floor"
+ },
+ {
+  "src": "media/photography/33-ramp-ring.jpg",
+  "w": 2560,
+  "h": 1440,
+  "caption": "Train Station, Ottawa, ON",
+  "date": "Oct 2015",
+  "alt": "A concrete ramp wall curling into a tight ring, with a timber rail and warm under-lighting below a steel truss roof"
+ },
+ {
+  "src": "media/photography/22-ramp-fins.jpg",
+  "w": 2560,
+  "h": 1440,
+  "caption": "Train Station, Ottawa, ON",
+  "date": "Oct 2015",
+  "alt": "A concrete ramp curving beneath radiating ceiling fins and a lit timber rail"
+ }
+]

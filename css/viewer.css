@@ -1,0 +1,67 @@
+html:has(body.viewer-page){overflow:hidden}
+html,body.viewer-page{height:100%}
+body.viewer-page{height:100vh;height:100dvh}
+body.viewer-page{display:grid;grid-template-rows:auto minmax(0,1fr);overflow:hidden;background:var(--paper)}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.vbar{display:flex;align-items:center;gap:16px;padding:10px 16px;border-bottom:1px solid var(--rule);background:var(--paper)}
+.vbar .back{text-decoration:none;color:var(--mute);font-size:.9rem;white-space:nowrap}
+.vbar .back:hover{color:var(--ink)}
+.vtitle{display:flex;flex-direction:column;gap:4px;min-width:0;flex:1}
+.vtitle strong{font:500 1.15rem/1.15 var(--display);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.setpick select{font:inherit;font-size:.88rem;padding:.45rem .6rem;background:var(--panel);color:var(--ink);border:1px solid var(--rule);max-width:46vw}
+.vmain{display:grid;grid-template-columns:15rem minmax(0,1fr);min-height:0;position:relative;overflow:hidden}
+.sheets{border-right:1px solid var(--rule);background:var(--panel);overflow:auto;min-height:0}
+.sheets-head{display:flex;justify-content:space-between;padding:12px 14px;position:sticky;top:0;background:var(--panel);border-bottom:1px solid var(--rule);z-index:1}
+.sheets ol{list-style:none;margin:0;padding:8px;display:grid;gap:8px}
+.sheets li button{all:unset;box-sizing:border-box;display:grid;grid-template-columns:5.2rem 1fr;gap:10px;align-items:center;width:100%;padding:6px;cursor:pointer;border:1px solid transparent}
+.sheets li button:hover{border-color:var(--rule)}
+.sheets li button[aria-current="true"]{border-color:var(--accent);background:var(--paper)}
+.sheets li button:focus-visible{outline:2px solid var(--accent)}
+.sheets canvas{width:100%;height:auto;background:#fff;border:1px solid var(--rule);display:block;aspect-ratio:3/2}
+.sheets .num{font:500 .78rem/1.3 var(--mono);color:var(--ink)}
+.sheets .sub{display:block;font:400 .7rem/1.3 var(--mono);color:var(--mute)}
+.stage{position:relative;background:var(--stage);overflow:hidden;min-height:0;min-width:0;touch-action:none}
+.canvaswrap{position:absolute;inset:0;cursor:grab;outline:none;overflow:hidden}
+.canvaswrap.panning{cursor:grabbing}
+.canvaswrap.measuring{cursor:crosshair}
+.canvaswrap canvas{position:absolute;left:0;top:0;transform-origin:0 0}
+.overlay{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+.overlay line{stroke:#ff5a4d;stroke-width:1.5}
+.overlay circle{fill:#ff5a4d}
+.overlay text{font:600 12px var(--mono);fill:#fff;paint-order:stroke;stroke:#1b1c1e;stroke-width:4px;stroke-linejoin:round}
+.toolbar{position:absolute;left:50%;transform:translateX(-50%);bottom:14px;display:flex;align-items:center;gap:2px;padding:4px;background:rgba(24,25,27,.92);color:var(--stage-ink);border:1px solid var(--stage-rule);max-width:calc(100% - 16px);flex-wrap:wrap;justify-content:center}
+.toolbar button,.toolbar .dl{all:unset;box-sizing:border-box;cursor:pointer;padding:.55rem .7rem;min-height:2.5rem;min-width:2.5rem;display:inline-grid;place-items:center;font:500 .8rem/1 var(--body);color:var(--stage-ink)}
+.toolbar button:hover,.toolbar .dl:hover{background:#3a3d41}
+.toolbar button[aria-pressed="true"]{background:var(--accent);color:var(--onaccent)}
+.toolbar button:focus-visible,.toolbar .dl:focus-visible{outline:2px solid #fff;outline-offset:-2px}
+.toolbar .sep{width:1px;align-self:stretch;background:var(--stage-rule);margin:4px 2px}
+.pagelabel{font:500 .78rem/1 var(--mono);padding:0 .5rem;min-width:5rem;text-align:center}
+.only-narrow{display:none!important}
+.measurebar{position:absolute;left:50%;transform:translateX(-50%);top:12px;display:flex;gap:12px;align-items:center;flex-wrap:wrap;justify-content:center;background:rgba(24,25,27,.94);color:var(--stage-ink);border:1px solid var(--stage-rule);padding:8px 12px;font-size:.82rem;max-width:calc(100% - 16px)}
+.measurebar[hidden]{display:none}
+.measurebar select{font:inherit;background:#34373a;color:var(--stage-ink);border:1px solid var(--stage-rule);padding:.35rem .5rem;margin-left:6px}
+.measurebar output{font:500 .8rem/1.3 var(--mono);min-width:14rem}
+.measurebar button{all:unset;cursor:pointer;padding:.4rem .6rem;border:1px solid var(--stage-rule)}
+.measurebar button:hover{background:#3a3d41}
+.status{position:absolute;left:12px;bottom:12px;margin:0;font:400 .72rem/1.3 var(--mono);color:#aeb0b2;pointer-events:none}
+.loading{position:absolute;inset:0;display:grid;place-items:center;margin:0;color:#c9cbcd;font:500 .9rem var(--mono);pointer-events:none}
+.loading[hidden]{display:none}
+@media (max-width:820px){
+  .vmain{grid-template-columns:minmax(0,1fr)}
+  .sheets{position:absolute;z-index:5;top:auto;left:0;right:0;bottom:0;max-height:55%;border-top:1px solid var(--rule);border-right:0;transform:translateY(100%);transition:transform .2s}
+  .sheets.open{transform:none}
+  .only-narrow{display:inline-grid!important}
+  .toolbar{bottom:8px;left:8px;right:8px;transform:none;max-width:none}
+  .toolbar button,.toolbar .dl{padding:.5rem .55rem;min-width:2.4rem}
+  .toolbar .sep{display:none}
+  .measurebar output{min-width:0}
+  .status{display:none}
+}
+@media (prefers-reduced-motion:reduce){.sheets{transition:none}}
+[hidden]{display:none!important}
+
+/* product and reference links carried by a sheet (for example the IKEA Canada links on the pantry parts list) */
+.links{position:absolute;inset:0;pointer-events:none;overflow:hidden}
+.links a{position:absolute;display:block;pointer-events:auto;cursor:pointer;border-radius:2px;outline-offset:0}
+.links a:hover,.links a:focus-visible{outline:1.5px solid #4da3ff;background:rgba(77,163,255,.14)}
+.canvaswrap.measuring ~ .links a{pointer-events:none}

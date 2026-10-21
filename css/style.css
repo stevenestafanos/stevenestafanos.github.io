@@ -1,0 +1,66 @@
+:root{
+  --paper:#f5f3ee; --panel:#ece9e2; --ink:#1d1d1b; --mute:#6b6a65; --rule:#d6d2c8; --accent:#7a5a3a; --onaccent:#fff;
+  --stage:#2b2b29; --stage-ink:#ecebe6; --stage-rule:#454440;
+  --display:"Cormorant Garamond","Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;
+  --body:"Avenir","Avenir Next","Nunito Sans","Helvetica Neue",Helvetica,Arial,system-ui,sans-serif;
+  --mono:"Avenir","Avenir Next","Nunito Sans","Helvetica Neue",Helvetica,Arial,system-ui,sans-serif;
+  color-scheme:light dark;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){--paper:#171716;--panel:#1f1f1d;--ink:#ebe8e1;--mute:#98958d;--rule:#34332f;--accent:#c4a27c;--onaccent:#171716;--stage:#0f0f0e;color-scheme:dark}
+}
+:root[data-theme="dark"]{--paper:#171716;--panel:#1f1f1d;--ink:#ebe8e1;--mute:#98958d;--rule:#34332f;--accent:#c4a27c;--onaccent:#171716;--stage:#0f0f0e;color-scheme:dark}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font:300 17px/1.65 var(--body);font-variant-numeric:lining-nums tabular-nums;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-underline-offset:3px;text-decoration-thickness:1px}
+a:focus-visible,button:focus-visible,select:focus-visible,input:focus-visible{outline:1px solid var(--ink);outline-offset:3px}
+.wrap{max-width:1160px;margin:0 auto;padding:0 24px}
+.top{display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding:28px 0;border-bottom:1px solid var(--rule)}
+.top .name{display:flex;flex-direction:column;align-items:flex-start;gap:8px;font:400 .8rem/1 var(--body);letter-spacing:.24em;text-transform:uppercase;text-decoration:none}
+.top .name span,.top .name small{display:block;width:max-content;white-space:nowrap}
+.top .name small{font:400 .6rem/1 var(--body);letter-spacing:.2em;color:var(--mute)}
+.top .name:hover small{color:var(--ink)}
+.top nav{display:flex;align-items:center;gap:20px;flex-wrap:wrap;font:400 .72rem/1 var(--body);letter-spacing:.13em;text-transform:uppercase}
+.top nav a{text-decoration:none;color:var(--mute)}
+.top nav a:hover,.top nav a[aria-current]{color:var(--ink)}
+h1,h2,h3{font-family:var(--display);font-weight:400;letter-spacing:-.005em;margin:0;text-wrap:balance}
+.draftbar{border-bottom:1px solid var(--rule);color:var(--mute);font:400 .68rem/1.5 var(--body);letter-spacing:.14em;text-transform:uppercase;padding:8px 24px;text-align:center}
+.eyebrow{font:400 .68rem/1 var(--body);letter-spacing:.24em;text-transform:uppercase;color:var(--mute)}
+.card-tag{font:400 .66rem/1.4 var(--body);letter-spacing:.18em;text-transform:uppercase;color:var(--mute)}
+.btn{display:inline-block;border:1px solid var(--ink);padding:.8rem 1.4rem;text-decoration:none;font:400 .72rem/1 var(--body);letter-spacing:.18em;text-transform:uppercase;min-height:2.5rem}
+.btn:hover{background:var(--ink);color:var(--paper)}
+
+
+[hidden]{display:none!important}
+.menu-btn{display:none;appearance:none;background:none;border:1px solid var(--rule);color:var(--ink);width:2.75rem;height:2.75rem;padding:0;cursor:pointer;align-items:center;justify-content:center;flex:none}
+.menu-btn i{display:block;position:relative;width:18px;height:1px;background:currentColor}
+.menu-btn i::before,.menu-btn i::after{content:"";position:absolute;left:0;width:18px;height:1px;background:currentColor;transition:transform .2s,top .2s}
+.menu-btn i::before{top:-6px}.menu-btn i::after{top:6px}
+.menu-btn[aria-expanded="true"] i{background:transparent}
+.menu-btn[aria-expanded="true"] i::before{top:0;transform:rotate(45deg)}
+.menu-btn[aria-expanded="true"] i::after{top:0;transform:rotate(-45deg)}
+/* the menu replaces the nav as soon as the nav no longer fits on one row (js/brand.js adds .mm); the media query is the fallback before the script runs */
+.top.mm{flex-wrap:wrap;align-items:center}
+.top.mm .menu-btn{display:inline-flex}
+.top.mm nav{display:none;flex:1 0 100%;flex-direction:column;align-items:stretch;gap:0;margin-top:14px;border-top:1px solid var(--rule)}
+.top.mm nav.open{display:flex}
+.top.mm nav a{padding:15px 0;border-bottom:1px solid var(--rule);font-size:.76rem}
+@media (max-width:1020px){
+  .top{flex-wrap:wrap;align-items:center}
+  .menu-btn{display:inline-flex}
+  .top nav{display:none;flex:1 0 100%;flex-direction:column;align-items:stretch;gap:0;margin-top:14px;border-top:1px solid var(--rule)}
+  .top nav.open{display:flex}
+  .top nav a{padding:15px 0;border-bottom:1px solid var(--rule);font-size:.76rem}
+}
+/* site header stays at hand: hides on scroll down, returns on the slightest scroll up (js/brand.js) */
+.top{position:sticky;top:0;z-index:40;background:var(--paper);box-shadow:0 0 0 100vmax var(--paper);clip-path:inset(0 -100vmax -1px);transition:transform .28s ease}
+.top.hid{transform:translateY(calc(-100% - 2px))}
+html:has(.top){scroll-padding-top:110px}
+@media (prefers-reduced-motion:reduce){.top{transition:none}}
+
+.foot a{color:inherit;text-decoration:none}
+.foot a:hover,.foot a:focus-visible{text-decoration:underline;text-underline-offset:3px}
+
+/* slightly larger small print (feedback: text too small) */
+.eyebrow,.card-tag{font-size:.72rem}

@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Working Drawings | Steven Estafanos</title>
+<meta name="description" content="Working drawing sets by Steven Estafanos, viewable at full resolution with a scale-aware measure tool.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,400&family=Nunito+Sans:opsz,wght@6..12,300;6..12,400;6..12,500;6..12,600&display=swap">
+<script>(function(){var nav;try{var e=performance.getEntriesByType("navigation")[0];nav=e&&e.type;}catch(x){}try{history.scrollRestoration="manual";}catch(x){}var K="sy:"+location.pathname+location.search,back=nav==="back_forward",y=0,touched=false,st;if(back){try{y=+sessionStorage.getItem(K)||0;}catch(x){}}
+function go(){if(touched)return;if(back||!location.hash){if(Math.abs(window.scrollY-y)>2)window.scrollTo(0,y);}}
+["wheel","touchstart","keydown","mousedown"].forEach(function(n){addEventListener(n,function(){touched=true;},{passive:true,once:true});});
+go();addEventListener("load",function(){go();if(back)[80,300,800,1600,3000].forEach(function(t){setTimeout(go,t);});});
+addEventListener("pageshow",function(e){if(!e.persisted)go();});
+function save(){try{sessionStorage.setItem(K,String(window.scrollY));}catch(x){}}
+addEventListener("scroll",function(){clearTimeout(st);st=setTimeout(save,120);},{passive:true});addEventListener("pagehide",save);})();</script>
+<link rel="stylesheet" href="css/style.css"><script src="js/protect.js"></script>
+<link rel="stylesheet" href="css/viewer.css">
+</head>
+<body class="viewer-page">
+<header class="vbar">
+  <a class="back" href="index.html">&larr; Architecture Portfolio</a>
+  <div class="vtitle"><span class="eyebrow" id="vCourse"></span><strong id="vTitle">Working drawings</strong></div>
+  <label class="setpick"><span class="sr">Drawing set</span><select id="setSelect" aria-label="Drawing set"></select></label>
+</header>
+
+<main class="vmain">
+  <aside class="sheets" id="sheets" aria-label="Sheets">
+    <div class="sheets-head"><span class="eyebrow">Sheets</span><span id="sheetCount" class="eyebrow"></span></div>
+    <ol id="sheetList"></ol>
+  </aside>
+
+  <section class="stage" id="stage" aria-label="Drawing viewer">
+    <div class="canvaswrap" id="canvasWrap" tabindex="0" aria-label="Drawing. Drag to pan, scroll to zoom, double-click to fit."></div>
+    <svg class="overlay" id="overlay" aria-hidden="true"></svg>
+    <div class="links" id="links"></div>
+    <div class="toolbar" role="toolbar" aria-label="Viewer tools">
+      <button type="button" id="btnSheets" class="only-narrow" aria-expanded="false">Sheets</button>
+      <button type="button" id="btnPrev" aria-label="Previous sheet">&larr;</button>
+      <span id="pageLabel" class="pagelabel" aria-live="polite">&ndash;</span>
+      <button type="button" id="btnNext" aria-label="Next sheet">&rarr;</button>
+      <span class="sep"></span>
+      <button type="button" id="btnOut" aria-label="Zoom out">&minus;</button>
+      <button type="button" id="btnFit">Fit</button>
+      <button type="button" id="btnPrint" title="Zoom to true paper size (96 CSS px = 1 in)">Paper size</button>
+      <button type="button" id="btnIn" aria-label="Zoom in">+</button>
+      <span class="sep"></span>
+      <button type="button" id="btnMeasure" aria-pressed="false">Measure</button>
+    </div>
+    <div class="measurebar" id="measureBar" hidden>
+      <label>Scale for this measurement
+        <select id="scaleSelect"></select>
+      </label>
+      <output id="measureOut" aria-live="polite">Click two points.</output>
+      <button type="button" id="btnClear">Clear</button>
+    </div>
+    <p class="status" id="status" aria-live="polite"></p>
+    <p class="loading" id="loading" hidden>Loading sheet&hellip;</p>
+  </section>
+</main>
+<noscript><p style="padding:2rem">The drawing viewer needs JavaScript. The PDFs are in the drawings folder.</p></noscript>
+<script src="vendor/pdf.min.js"></script>
+<script src="js/viewer.js"></script>
+<script>(function(){var a=document.querySelector(".vbar .back");function f(){if(!a)return;var M={pantry:["applied-pantry.html","Pantry project"],"dsn-warming-huts":["design-warming-huts.html","Warming Hut"],"dsn-th":["design-treehouse.html","Muskoka Cottage"]},m=(location.hash||"").replace("#","").replace(/-p\d+$/,""),p=M[m];a.href=p?p[0]:"index.html";a.innerHTML=p?"&larr; "+p[1]:"&larr; Portfolio";}f();window.addEventListener("hashchange",f);})();</script></body>
+</html>

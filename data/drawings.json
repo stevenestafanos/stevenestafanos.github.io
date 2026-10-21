@@ -1,0 +1,176 @@
+{
+ "sets": [
+  {
+   "id": "wd2-mckay",
+   "title": "McKay Residence",
+   "course": "Working Drawings II",
+   "software": "AutoCAD",
+   "units": "imperial",
+   "file": "drawings/wd2-mckay-residence.pdf",
+   "blurb": "Class-issued two-storey house with basement and garage, substantially modified: plan widened 4 ft, fireplace relocated, staircase redesigned to meet the OBC.",
+   "sheetNos": [
+    "A0.0",
+    "A0.1",
+    "A1.0",
+    "A2.0",
+    "A2.1",
+    "A2.2",
+    "A3.0",
+    "A4.0",
+    "A5.1",
+    "A5.2",
+    "A6.0"
+   ],
+   "detail": "Two-storey house with basement and garage. The class-issued project was substantially modified. The plan was widened 4 ft to the left and the fireplace relocated, so the dining area seats a 6 to 8 person table and the living room is more comfortable. The staircase was redesigned to meet the OBC, as the original did not comply. The cover sheet carries the OBC compliance package and SB-12 energy summary."
+  },
+  {
+   "id": "wd3-wellington",
+   "title": "Wellington Place",
+   "course": "Working Drawings III",
+   "software": "AutoCAD",
+   "units": "imperial",
+   "file": "drawings/wd3-wellington-place.pdf",
+   "blurb": "Existing and demolition plans and the proposed ground and second floors. The second-floor apartments were designed entirely by Steven.",
+   "sheetNos": [
+    "A1.0",
+    "A1.1",
+    "A2.0",
+    "AF1.0",
+    "AF2.0",
+    "AF3.0",
+    "D1.0",
+    "A3.0",
+    "A4.0",
+    "A5.0",
+    "A6.0",
+    "A7.0"
+   ],
+   "detail": "Drawing set for Wellington Place, with existing and demolition plans and the proposed ground and second floors. The second-floor apartments were designed entirely by Steven. Views on the sheets carry their own scales, so the measure tool asks which one applies."
+  },
+  {
+   "id": "wd4-01",
+   "title": "Refrigerated Food Storage and Distribution Facility",
+   "course": "Working Drawings IV, project 01",
+   "software": "Revit",
+   "units": "metric",
+   "file": "drawings/wd4-01-cold-storage-facility.pdf",
+   "blurb": "Plans, section, elevations, wall sections and details for a refrigerated food storage and distribution facility.",
+   "sheetNos": [
+    "A100",
+    "A101",
+    "A102",
+    "A201",
+    "A301",
+    "A302",
+    "A401",
+    "A402",
+    "A403",
+    "A501",
+    "A601"
+   ]
+  },
+  {
+   "id": "wd4-02",
+   "title": "Administration Building",
+   "course": "Working Drawings IV, project 02",
+   "software": "Revit",
+   "units": "metric",
+   "file": "drawings/wd4-02-administration-building.pdf",
+   "blurb": "Plans, elevations, wall sections, stair details and assembly types. The precast panels are built from custom reveal families in Revit.",
+   "sheetNos": [
+    "A100",
+    "A101",
+    "A102",
+    "A103",
+    "A201",
+    "A301",
+    "A302",
+    "A303",
+    "A401",
+    "A402",
+    "A403",
+    "A501",
+    "A601",
+    "A701",
+    "A702",
+    "A801"
+   ],
+   "detail": "Plans, elevations, wall sections, stair details and assembly types for an administration building. The precast panels, with chamfered edges and sealant joints, are built from custom reveal families in Revit."
+  },
+  {
+   "id": "wd1-estafanos-house",
+   "title": "Shoreline House",
+   "course": "Working Drawings I",
+   "software": "Hand-drafted, cover in AutoCAD",
+   "units": "imperial",
+   "file": "drawings/wd1-estafanos-house.pdf",
+   "measure": false,
+   "sheetNames": [
+    "A0.0 Cover",
+    "A0.1 General Notes, Assemblies",
+    "A0.2 Door and Window Schedules",
+    "A1.1 Site and Grade Plan",
+    "A2.1 Basement Plan",
+    "A2.2 First Floor Plan",
+    "A4.1 Front Elevation",
+    "A4.2 Right Side Elevation",
+    "A5.1 Building Section",
+    "A6.1 Interior Elevation, Kitchen",
+    "A7.1 Sill Details",
+    "A7.4 Eave Detail",
+    "A7.5 Stair Details"
+   ],
+   "blurb": "Hand-drafted permit-style set for a one-storey house with basement, submitted April 2023. Scans cleaned, drawn content unaltered; scaling not offered.",
+   "detail": "Hand-drafted permit-style set for a one-storey house with basement, submitted April 2023: cover with OBC and SB-12 package, notes, assemblies, schedules, site and grade plan, plans, elevations, section, kitchen elevation, and sill, eave and stair details. The scans are cleaned (creases and shadows flattened, paper whitened); the drawn content is unaltered. Scaling is not offered on this set."
+  },
+  {
+   "id": "pantry",
+   "title": "Second Floor Pantry",
+   "course": "Applied design",
+   "software": "Drawn without CAD, with AI assistance",
+   "units": "imperial",
+   "file": "drawings/pantry-drawing-set.pdf",
+   "blurb": "Concept drawing set for a linen pantry and dry bar, designed by Steven from his own site measurements. Dimensions are to be verified on site before cutting.",
+   "sheetNames": [
+    "A-0 Cover and Notes",
+    "A-1 Floor Plan",
+    "A-2 Top Wall, Exterior Elevation",
+    "A-3 Top Wall, Interior Elevation",
+    "A-4 Bottom Wall, Exterior Elevation",
+    "A-5 Bottom Wall, Interior Elevation",
+    "A-6 Sections, Boxes 1, 2, 3",
+    "A-7 Parts List",
+    "A-8 Panel Cut List and Open Items"
+   ]
+  },
+  {
+   "id": "dsn-warming-huts",
+   "title": "Warming Hut: Fire and Ice",
+   "course": "Design Studio, Winter 2024",
+   "software": "AutoCAD",
+   "units": "imperial",
+   "file": "drawings/design-warming-huts.pdf",
+   "blurb": "Plan, reflected ceiling plan, two elevations and a section of a warming hut sized for a 7'-0\" x 14'-0\" raft, on the Warming Huts competition brief, Winnipeg, MB. Each drawing has its own scale bar.",
+   "sheetNames": [
+    "A-1 Plan and Reflected Ceiling Plan",
+    "A-2 Front and Side Elevations",
+    "A-3 Section"
+   ]
+  },
+  {
+   "id": "dsn-th",
+   "title": "Muskoka Cottage: The Treehouse",
+   "course": "Design Studio, Winter 2024",
+   "software": "Revit",
+   "units": "metric",
+   "file": "drawings/design-treehouse.pdf",
+   "blurb": "Site plan, group plan, four floor plans, two elevations and three sections of a four-building lake cottage in Muskoka, ON, with a table of room areas. Each drawing has a scale bar.",
+   "sheetNames": [
+    "A-1 Site Plan, Group Plan and Room Areas",
+    "A-2 Floor Plans",
+    "A-3 South and East Elevations",
+    "A-4 Sections"
+   ]
+  }
+ ]
+}

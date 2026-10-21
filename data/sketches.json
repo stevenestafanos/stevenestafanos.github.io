@@ -1,0 +1,44 @@
+[
+ {
+  "src": "media/sketches/10-backyard.jpg",
+  "w": 1604,
+  "h": 2162,
+  "caption": "Private Residence, Ottawa, ON",
+  "alt": "Pencil drawing of a covered porch with a stepped entry and hipped roof"
+ },
+ {
+  "src": "media/sketches/20-hallway.jpg",
+  "w": 2028,
+  "h": 2079,
+  "caption": "Private Residence, Ottawa, ON",
+  "alt": "Pencil drawing of an upper hallway with a rocking chair, floor lamp and stair guard"
+ },
+ {
+  "src": "media/sketches/18-cathedral.jpg",
+  "w": 1861,
+  "h": 1803,
+  "caption": "Notre-Dame Cathedral Basilica, Ottawa, ON",
+  "alt": "Ink drawing of a Gothic cathedral tower rising behind the nave roof"
+ },
+ {
+  "src": "media/sketches/01-50-george.jpg",
+  "w": 2115,
+  "h": 2092,
+  "caption": "50 George Street, Ottawa, ON",
+  "alt": "Pencil drawing of a glass tower with stacked balconies, seen from above"
+ },
+ {
+  "src": "media/sketches/19-hillside.jpg",
+  "w": 2178,
+  "h": 1598,
+  "caption": "Imagined hillside structure",
+  "alt": "Coloured pencil drawing of a concrete box cantilevered out from a grassy slope"
+ },
+ {
+  "src": "media/sketches/12-stair-hall.jpg",
+  "w": 1611,
+  "h": 2162,
+  "caption": "Stair hall with wall sconce",
+  "alt": "Pencil drawing of a tall stair hall with deep shadow and a T-shaped wall sconce lighting the landing"
+ }
+]

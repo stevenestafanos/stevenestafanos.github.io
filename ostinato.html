@@ -1,0 +1,476 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Ostinato in Architecture | Steven Estafanos</title>
+<meta name="description" content="A study of rhythm and repetition in Case Study House #26, read through the form of a jazz tune.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,400&family=Nunito+Sans:opsz,wght@6..12,300;6..12,400;6..12,500;6..12,600&display=swap">
+<script>(function(){var nav;try{var e=performance.getEntriesByType("navigation")[0];nav=e&&e.type;}catch(x){}try{history.scrollRestoration="manual";}catch(x){}var K="sy:"+location.pathname+location.search,back=nav==="back_forward",y=0,touched=false,st;if(back){try{y=+sessionStorage.getItem(K)||0;}catch(x){}}
+function go(){if(touched)return;if(back||!location.hash){if(Math.abs(window.scrollY-y)>2)window.scrollTo(0,y);}}
+["wheel","touchstart","keydown","mousedown"].forEach(function(n){addEventListener(n,function(){touched=true;},{passive:true,once:true});});
+go();addEventListener("load",function(){go();if(back)[80,300,800,1600,3000].forEach(function(t){setTimeout(go,t);});});
+addEventListener("pageshow",function(e){if(!e.persisted)go();});
+function save(){try{sessionStorage.setItem(K,String(window.scrollY));}catch(x){}}
+addEventListener("scroll",function(){clearTimeout(st);st=setTimeout(save,120);},{passive:true});addEventListener("pagehide",save);})();</script>
+<link rel="stylesheet" href="css/style.css"><script src="js/protect.js"></script><script src="js/brand.js" defer></script>
+<link rel="stylesheet" href="css/home.css">
+<style>
+.study{max-width:64rem;margin:0 auto;padding:64px 0 40px}
+.study h1{font-size:clamp(2.6rem,7vw,4.6rem);font-weight:300;line-height:1;margin:1rem 0 1.2rem}
+.study h2{font-size:2rem;margin:4.5rem 0 1rem}
+.study p,.study .col{max-width:62ch}
+.opener{display:grid;grid-template-columns:minmax(0,1fr) minmax(220px,420px);gap:48px;align-items:start;margin-bottom:24px}
+.opener .cov{margin:104px 0 0}
+.opener .cov img{width:100%;aspect-ratio:33/51;object-fit:cover;object-position:86% 50%;display:block}
+.listen{display:inline-block;margin:0 0 36px;font:400 .7rem/1 var(--body);letter-spacing:.18em;text-transform:uppercase;color:var(--ink);text-decoration:none;border-bottom:1px solid var(--ink);padding-bottom:5px}
+.lede{font:500 1.35rem/1.4 var(--display);color:var(--ink);max-width:30ch}
+.tools{border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);padding:18px 0 14px;margin:2.4rem 0 0;max-width:62ch}
+.tools h2{font:400 .68rem/1 var(--body);letter-spacing:.24em;text-transform:uppercase;color:var(--mute);margin:0 0 12px}
+.tools dl{margin:0;display:grid;grid-template-columns:minmax(8.5rem,auto) minmax(0,1fr);gap:6px 24px;font:300 .95rem/1.5 var(--body)}
+.tools dt{color:var(--mute)}.tools dd{margin:0}
+@media (max-width:600px){.tools dl{grid-template-columns:1fr;gap:0}.tools dd{margin-bottom:8px}}
+.def{border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);padding:14px 0;margin:2rem 0;color:var(--mute)}
+.def b{color:var(--ink);font-weight:400}
+.quote{margin:3rem 0;font:italic 400 clamp(1.6rem,4vw,2.3rem)/1.25 var(--display);max-width:26ch}
+.quote small{display:block;font:300 .8rem/1.6 var(--body);font-style:normal;color:var(--mute);margin-top:12px;max-width:60ch}
+figure{margin:2.4rem 0}
+figure img,video{width:100%;height:auto;display:block}
+figure img{cursor:zoom-in}
+.lb{position:fixed;inset:0;z-index:50;background:#0f0f0e;display:flex;align-items:center;justify-content:center;padding:56px 64px}
+.lb[hidden]{display:none}
+.lb-f{margin:0;max-width:100%;max-height:100%;display:flex;flex-direction:column;align-items:center;gap:12px;min-height:0}
+.lb-f img,.lb-f video{max-width:100%;max-height:calc(100vh - 170px);width:auto;height:auto;object-fit:contain;cursor:pointer;background:#000}
+.lb-f video{cursor:default;min-width:min(100%,640px)}
+.lb-open{position:absolute;top:12px;right:12px;background:rgba(15,15,14,.72);border:1px solid #ecebe6;color:#ecebe6;font:400 .66rem/1 var(--body);letter-spacing:.18em;text-transform:uppercase;padding:.55rem .75rem;cursor:pointer}
+.lb-open:hover{background:#0f0f0e}
+.lb-f figcaption{color:#ecebe6;text-align:center;max-width:70ch;margin:0;font:400 .9rem/1.5 var(--body);flex:none;min-height:1.5em}
+.lb button{position:absolute;background:none;border:1px solid #ecebe6;color:#ecebe6;font:400 .72rem/1 var(--body);letter-spacing:.18em;text-transform:uppercase;padding:.7rem 1rem;cursor:pointer}
+.lb .lb-x{top:14px;right:16px}
+.lb .lb-n{top:50%;transform:translateY(-50%);font-size:1.6rem;line-height:1;padding:.6rem .9rem;letter-spacing:0}
+.lb .lb-p{left:12px}.lb .lb-nx{right:12px}
+@media (max-width:600px){.lb{padding:56px 12px 70px}.lb .lb-n{top:auto;bottom:14px;transform:none}}
+video{background:#000}
+figcaption,.cap{font:300 .78rem/1.5 var(--body);color:var(--mute);margin-top:10px;max-width:70ch}
+.pair,.trio{display:grid;gap:16px;margin:2.4rem 0}
+.pair{grid-template-columns:repeat(2,minmax(0,1fr))}
+.trio{grid-template-columns:repeat(3,minmax(0,1fr))}
+.pair figure,.trio figure{margin:0}
+.pair img,.trio img{aspect-ratio:16/9;object-fit:cover}
+.sheet{border:1px solid var(--rule);padding:24px 20px 20px;margin:2.4rem 0}
+.sheet h3{font:400 .68rem/1 var(--body);letter-spacing:.22em;text-transform:uppercase;color:var(--mute);margin:0 0 18px}
+.sheet svg{width:100%;height:auto;display:block}
+#plan text{font:400 13px var(--body);fill:var(--mute);text-anchor:middle}
+#plan .rn{font:500 17px var(--body);fill:var(--ink)}
+#plan .fn{fill:var(--accent);font:500 14px var(--body)}
+#plan .wall{fill:none;stroke:var(--ink);stroke-width:5}
+#plan .ln{fill:none;stroke:var(--ink);stroke-width:4.6}
+#plan .th{fill:none;stroke:var(--ink);stroke-width:1.2;opacity:.7}
+#plan .hat{fill:var(--ink);opacity:.16;stroke:none}
+#plan .fr{stroke:var(--accent);stroke-width:1.4}
+#plan .dk{fill:none;stroke:var(--rule);stroke-width:1.6;stroke-dasharray:6 6}
+#plan .hat2{fill:var(--ink);opacity:.45;stroke:none}
+#plan .win{fill:none;stroke:var(--ink);stroke-width:2.2}
+#plan .cp{fill:none;stroke:var(--ink);stroke-width:3.2}
+#plan .clos rect{fill:url(#louv);color:var(--ink);stroke:var(--ink);stroke-width:1.4}
+#plan .clos path{stroke:var(--ink);stroke-width:3}
+#plan .fpa{fill:none;stroke:var(--ink);stroke-width:1.6}
+#plan .fpm{fill:url(#xh);color:var(--ink);stroke:var(--ink);stroke-width:3}
+#plan .fpb{fill:var(--paper);stroke:var(--ink);stroke-width:2.4}
+#plan .fp path{stroke:var(--ink);stroke-width:1.2;fill:none}
+#plan .dim line,#plan .dim path{stroke:var(--mute);stroke-width:1.2;fill:none}
+#plan .dim .tk{stroke:var(--ink);stroke-width:2.4}
+#plan .bm{fill:none;stroke:var(--ink);stroke-width:3;opacity:.75}
+#plan .car rect,#plan .car path{fill:none;stroke:var(--mute);stroke-width:1.8;stroke-dasharray:2 5;stroke-linecap:round}
+#plan .stair path{fill:none;stroke:var(--ink);stroke-width:1.6;opacity:.85}
+#plan .stair .sa{stroke-width:1.2;color:var(--ink);opacity:.9}
+#plan .tr{fill:none;stroke:var(--ink);stroke-width:1.4;opacity:.8}
+#plan .dr{fill:none;stroke:var(--accent);stroke-width:3.4;stroke-linejoin:round}
+#plan .bay{fill:var(--accent);opacity:0;cursor:pointer;transition:opacity .15s}
+#plan .bay:hover{opacity:.08}
+#plan .bay.on{opacity:.2}
+.baybtns{display:grid;grid-template-columns:repeat(8,1fr);gap:4px;margin-top:14px}
+.baybtns button{font:400 .78rem/1 var(--body);background:transparent;color:var(--ink);border:1px solid var(--rule);padding:.7rem 0;min-height:2.6rem;cursor:pointer}
+.baybtns button[aria-pressed=true]{border-color:var(--ink);background:var(--ink);color:var(--paper)}
+.readout{margin:16px 0 0;min-height:5.6em;max-width:none}
+.readout b{font:400 1.35rem/1.2 var(--display)}
+.readout span{display:block;color:var(--mute);font-size:.9rem}
+.readout span.door{color:var(--accent)}
+.beats{display:grid;grid-template-columns:repeat(5,1fr);gap:4px;margin-top:22px}
+.beat{height:44px;border:1px solid var(--rule);display:flex;flex-direction:column;justify-content:space-between;padding:6px 8px;font:400 .7rem/1 var(--body);transition:background .06s}
+.beat.g1{border-color:var(--ink)}
+.beat.on{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.beat small{font-size:.66rem;opacity:.75}
+.ctl{display:flex;flex-wrap:wrap;gap:12px 20px;align-items:center;margin-top:16px}
+.ctl button{font:400 .72rem/1 var(--body);letter-spacing:.18em;text-transform:uppercase;background:var(--ink);color:var(--paper);border:1px solid var(--ink);padding:.9rem 1.4rem;min-height:2.6rem;cursor:pointer}
+.ctl button.alt{background:transparent;color:var(--ink)}
+.ctl label{font:300 .8rem/1 var(--body);display:flex;gap:10px;align-items:center}
+.ctl input[type=range]{accent-color:var(--ink);min-width:0;width:min(220px,50vw)}
+.formmap text{font:400 11px var(--body);fill:var(--ink)}
+.formmap .lbl{font:300 10px var(--body);fill:var(--mute)}
+.formmap .ta{fill:var(--paper)}
+.sA{fill:var(--ink)}
+.sB{fill:var(--rule)}
+.sS,.sM{fill:none;stroke:var(--mute);stroke-dasharray:3 3}
+.pl{stroke:var(--accent);stroke-width:2}
+.refs{font-size:.88rem;color:var(--mute);list-style:none;margin:0;padding:0}
+.refs li{margin:.7rem 0;max-width:70ch;padding-left:1.6rem;text-indent:-1.6rem}
+.refs .n{display:block;text-indent:0;font-size:.82rem;margin-top:2px}
+.refs a{color:var(--ink)}
+#where{font-size:.85rem;color:var(--ink)}
+@media (max-width:760px){.opener{grid-template-columns:1fr;gap:28px}.opener .cov{order:2;max-width:320px;margin-top:0}.pair,.trio{grid-template-columns:1fr}}
+@media (prefers-reduced-motion:reduce){.beat,#plan .bay{transition:none}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <a class="name" href="index.html" aria-label="Steven Estafanos, Architecture Portfolio: home"><span>Steven Estafanos</span><small>Architecture Portfolio</small></a>
+    <nav aria-label="Sections"><a href="index.html#design">Design Projects</a><a href="index.html#drawings">Working Drawings</a><a href="index.html#ostinato" aria-current="page">Ostinato</a><a href="index.html#photography">Photography</a><a href="index.html#sketches">Sketches</a><a href="resume.html">Résumé</a><a href="index.html#contact">Contact</a></nav>
+  </header>
+  <main class="study">
+    <div class="opener">
+      <div>
+        <a class="listen" href="https://www.youtube.com/watch?v=tT9Eh8wNMkw" rel="noopener" target="_blank">Listen first: Take Five</a>
+        <p class="eyebrow">Study, 2023. Visual Communications II, Algonquin College</p>
+        <h1>Ostinato in Architecture</h1>
+        <p class="lede">Rhythm and repetition in Case Study House #26, read through the form of a jazz tune.</p>
+        <blockquote class="quote">&ldquo;Architecture is frozen music.&rdquo;
+      <small>Johann Wolfgang von Goethe, in conversation with Johann Peter Eckermann, 23 March 1829. Goethe&rsquo;s words are <em>erstarrte Musik</em>, usually translated as &ldquo;frozen music&rdquo;.</small>
+    </blockquote>
+    <section class="tools" aria-labelledby="sw">
+      <h2 id="sw">Software and media</h2>
+      <dl>
+        <dt>3D model</dt><dd>SketchUp</dd>
+        <dt>Renders</dt><dd>Enscape, for every still on this page</dd>
+        <dt>Night walkthrough</dt><dd>SketchUp model, rendered in Enscape</dd>
+        <dt>Aerial, plan and elevation video</dt><dd>SketchUp</dd>
+        <dt>Floor plan and diagrams</dt><dd>Drawn by Claude (AI), traced from the published plan</dd>
+      </dl>
+    </section>
+      </div>
+      <figure class="cov">
+        <img src="media/ostinato/deck-day.jpg" width="1800" height="997" alt="The deck of the house model in daylight, with two figures walking beneath the overhanging roof beams" decoding="async">
+      </figure>
+    </div>
+
+
+    <div class="col">
+    <p>If architecture is frozen music, then music is liquid architecture, and a building and a tune should be able to be read against each other. This study tests that on one house and one piece of music. They are examples, not the only ones. Each was chosen because it shows the idea plainly.</p>
+    <p class="def"><b>Ostinato:</b> a musical motif or phrase that persistently repeats in the same musical voice, frequently at the same pitch.</p>
+    </div>
+
+    <h2>The House and the Tune</h2>
+    <div class="col">
+    <p>Case Study House No. 26 was published in <em>Arts &amp; Architecture</em> in October 1962 and, as built, in January 1963. It stands on a hillside in San Rafael, California, was built by Twentieth Century Homes with Bethlehem Steel, and was designed by Beverley Thorne. He also designed two houses for the jazz pianist Dave Brubeck: one in Oakland, California (completed 1954) and one in Wilton, Connecticut (around 1960). That link to Brubeck is why the tune is <em>Take Five</em>, written by Paul Desmond and recorded by the Dave Brubeck Quartet. It is a famous example of jazz form, built over a repeating two-chord figure in 5/4.</p>
+    </div>
+
+    <div class="pair">
+      <figure><img src="media/ostinato/exterior.jpg" width="1800" height="890" loading="lazy" decoding="async" alt="Exterior of the house model on its sandy hillside, raised on slender piers"><figcaption>Exterior of the model, raised on piers above the hillside.</figcaption></figure>
+      <figure><img src="media/ostinato/aerial.jpg" width="1800" height="997" loading="lazy" decoding="async" alt="Distant aerial view of the house model on its hill at low sun"><figcaption>The model on its site, at low sun.</figcaption></figure>
+    </div>
+
+    <figure>
+      <video controls controlsList="nodownload noremoteplayback" disablePictureInPicture oncontextmenu="return false" muted playsinline preload="metadata" poster="media/thumbs/ostinato.jpg" aria-describedby="c1">
+        <source src="media/ostinato-walkthrough.mp4" type="video/mp4">
+      </video>
+      <figcaption id="c1">Night walkthrough of the SketchUp and Enscape model of the house. 31 seconds.</figcaption>
+    </figure>
+
+    <h2>Structure: The Grid as the Ostinato</h2>
+    <div class="col">
+    <p>In music, a bar divides time into equal units. In this house the structure divides space the same way. The magazine describes nine identical rigid steel frames, spaced at 10&prime;-0&Prime; except the two end bays, which are 1&frac12;&Prime; wider. Nine frames make eight bays. The modules repeat like bars. What each one holds does not have to repeat, because each takes the use the programme needs. That is the idea in miniature: the repeating grid is the ostinato, and the varying uses are the improvisation over it.</p>
+    </div>
+
+    <figure>
+      <img src="media/ostinato/frame.jpg" width="1800" height="1012" loading="lazy" decoding="async" alt="Axonometric view of the model's steel frame alone, a repeating series of frames on short piers">
+      <figcaption>The steel frame of the model, without walls or cladding.</figcaption>
+    </figure>
+
+    <div class="sheet" id="bars">
+      <h3>Eight Bays, Eight Bars</h3>
+      <svg id="plan" viewBox="300 -62 1260 1004" role="img" aria-label="Simplified floor plan of Case Study House #26 with its nine structural frames, eight bays, fixtures, doors and carport. Select a bay to see what it holds.">
+        <defs><marker id="ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10Z" fill="currentColor"/></marker><pattern id="louv" width="5" height="10" patternUnits="userSpaceOnUse"><line x1="1.5" y1="0" x2="1.5" y2="10" stroke="currentColor" stroke-width="1.3"/></pattern><pattern id="xh" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="6" stroke="currentColor" stroke-width="1.4"/></pattern></defs>
+        <g id="bayg"></g>
+        <rect class="dk" x="360" y="48" width="1137" height="140"/>
+        <rect class="dk" x="360" y="508" width="1137" height="92"/>
+        <g id="frames"></g>
+        <rect class="wall" x="352" y="187" width="1156" height="321"/>
+        <path class="ln" d="M930 190V435M1065 190V372M1202 190V372M1338 190V372M518 298V346M655 298V508M655 435H792M518 380H655M518 380V412M518 470V508M995 428V508M992 428H1040M1127 428V508M1075 428H1158M1240 428V508M1192 428H1288M1250 375V380M1250 414V428M930 375H938M968 375H1166M1196 375H1208M1238 375H1338M1322 428H1360M1358 428V508"/>
+        <path class="win" d="M1285 428V508"/>
+        <path class="th" d="M510 412H526M510 470H526M360 348H467V368H360ZM468 342H482V380H468ZM363 380H386V403H363ZM363 433H383V475H363ZM388 375V487H527M388 375H467M448 418H482V483H448ZM403 490H432V510H403ZM1040 432L997 478M1075 458H1123V508H1075ZM1103 508L1123 492M1133 475H1153V495H1133ZM1202 432H1235V465H1202ZM1202 467H1235V508H1202ZM1262 440L1243 476M1328 432L1355 478M1400 483V508M1362 483H1497V430M316 368L334 396L316 425M1544 368L1526 396L1544 425"/>
+        <circle class="th" cx="1008" cy="447" r="8"/><circle class="th" cx="1015" cy="492" r="9"/><circle class="th" cx="1345" cy="445" r="9"/><circle class="th" cx="1333" cy="490" r="9"/><circle class="th" cx="1448" cy="497" r="8"/>
+        <g class="clos"><rect x="970" y="345" width="95" height="30"/><rect x="1065" y="345" width="97" height="30"/><path d="M970 345V375M1065 345V375M1162 345V375"/></g>
+        <g class="clos"><rect x="1243" y="345" width="97" height="30"/><path d="M1243 345V375M1340 345V375"/></g>
+        <g class="clos"><rect x="925" y="478" width="67" height="30"/></g>
+        <g class="clos"><rect x="1075" y="428" width="48" height="29"/></g>
+        <g class="clos"><rect x="1400" y="372" width="97" height="58"/></g>
+        <!-- glazing read from the construction plan: continuous between the steel posts; doors drawn approximately -->
+        <rect x="389" y="182.5" width="123" height="10" style="fill:var(--paper)"/><path class="dr" d="M389 184.5H454M447 190.5H512"/>
+        <rect x="524" y="182.5" width="125" height="10" style="fill:var(--paper)"/><path class="dr" d="M524 184.5H590M583 190.5H649"/>
+        <rect x="661" y="182.5" width="125" height="10" style="fill:var(--paper)"/><path class="dr" d="M661 184.5H727M720 190.5H786"/>
+        <rect x="798" y="182.5" width="124" height="10" style="fill:var(--paper)"/><path class="dr" d="M798 184.5H863.5M856.5 190.5H922"/>
+        <rect x="934" y="182.5" width="125" height="10" style="fill:var(--paper)"/><path class="dr" d="M934 184.5H1000M993 190.5H1059"/>
+        <rect x="1071" y="182.5" width="125" height="10" style="fill:var(--paper)"/><path class="dr" d="M1071 184.5H1137M1130 190.5H1196"/>
+        <rect x="1208" y="182.5" width="124" height="10" style="fill:var(--paper)"/><path class="dr" d="M1208 184.5H1273.5M1266.5 190.5H1332"/>
+        <rect x="1344" y="182.5" width="125" height="10" style="fill:var(--paper)"/><path class="dr" d="M1344 184.5H1410M1403 190.5H1469"/>
+        <rect x="524" y="504.0" width="125" height="8" style="fill:var(--paper)"/><path class="win" d="M524 506.0H649M524 510.0H649"/>
+        <rect x="650" y="439" width="10" height="34" style="fill:var(--paper)"/><path class="dr" d="M655 473A34 34 0 0 0 689 439M655 443H689"/>
+        <path class="dr" d="M518 346A34 34 0 0 1 552 380M518 377H552"/>
+        <path class="dr" d="M968 375A30 30 0 0 0 938 345M938 375V345"/>
+        <path class="dr" d="M1166 375A30 30 0 0 1 1196 345M1196 375V345"/>
+        <path class="dr" d="M1238 375A30 30 0 0 0 1208 345M1208 375V345"/>
+        <path class="dr" d="M1074 428A34 34 0 0 1 1040 462M1043 428V462"/>
+        <path class="dr" d="M1192 428A34 34 0 0 1 1158 462M1161 428V462"/>
+        <path class="dr" d="M1250 414A34 34 0 0 0 1284 380M1250 380H1284"/>
+        <path class="dr" d="M1288 428A34 34 0 0 0 1322 462M1319 428V462"/>
+        <rect class="win" x="316" y="368" width="36" height="57"/>
+        <rect class="win" x="1508" y="368" width="36" height="57"/>
+        <rect x="1158" y="503.5" width="35" height="9" style="fill:var(--paper)"/><path class="dr" d="M1158 508H1193V543M1158 508A35 35 0 0 0 1193 543"/>
+        <rect x="659" y="503" width="129" height="10" style="fill:var(--paper)"/><path class="dr" d="M659 505H727M720 511H788"/>
+        <rect x="796" y="503" width="128" height="10" style="fill:var(--paper)"/><path class="dr" d="M796 505H863M857 511H924"/>
+        <path class="bm" d="M518 604V895M655 604V895M792 604V895M928 604V895"/>
+        <path class="dk" d="M453 600V858H995V600"/>
+        <path class="th" d="M490 895H955"/>
+        <g class="th"><circle cx="517" cy="895" r="16"/><circle cx="653" cy="895" r="16"/><circle cx="790" cy="895" r="16"/><circle cx="927" cy="895" r="16"/>
+        <path d="M501 895H533M517 879V911M637 895H669M653 879V911M774 895H806M790 879V911M911 895H943M927 879V911"/></g>
+        <g class="car"><rect x="545" y="690" width="219" height="86" rx="34"/><rect x="603" y="699" width="105" height="68" rx="18"/><path d="M603 733H708"/></g>
+        <g class="stair"><path d="M796 826V890H896V700H832V826Z"/><path d="M814 826V890M832 808H896M832 790H896M832 772H896M832 754H896M832 736H896M832 718H896"/><path class="sa" d="M805 858H864V714" marker-end="url(#ah)"/></g>
+        <rect class="ln" x="1008" y="600" width="132" height="45"/>
+        <circle class="th" cx="1036" cy="622" r="14"/><circle class="th" cx="1083" cy="622" r="14"/>
+        <g class="fp"><rect class="fpa" x="665" y="382" width="115" height="53"/><rect class="fpm" x="684" y="402" width="76" height="33"/><rect class="fpb" x="700" y="414" width="44" height="21"/><path d="M706 414V435M722 414V435M738 414V435"/></g>
+        <g id="rooms"></g>
+        <g id="dims"></g>
+      </svg>
+      <div class="baybtns" id="baybtns" role="group" aria-label="Choose a bay"></div>
+      <p class="readout" id="readout" aria-live="polite"></p>
+      <div class="beats" id="beats" aria-label="Five beats per bar, grouped three plus two"></div>
+      <div class="ctl">
+        <button id="play" type="button" aria-pressed="false">Play</button>
+        <label>Tempo <input id="tempo" type="range" min="100" max="200" value="168" aria-label="Tempo"> <output id="tempoOut">168</output></label>
+      </div>
+      <p class="cap">Press play to hear the figure (three beats of E&flat; minor, two of B&flat; minor 7), one bar for each bay in turn. A rough synthesis, not the recording. Floor plan drawn by Claude (AI), traced and simplified from the plan published in <em>Arts &amp; Architecture</em>, 1962&ndash;63, with room numbers from its legend. Doors are drawn in bronze: the entry is a sliding door into the foyer (6), a second slider serves bay 4, and a swing door opens to the lower deck. The stair comes down from the carport in bay 4, and the closet beside the lower deck is mechanical. The frames continue into the carport as beams down to their piers; the dotted car is a 16-foot outline for scale. The glazing is drawn as read from the construction plan: a glazed unit in every bay along the deck wall (typically 8&prime;-0&Prime; wide by 9&prime;-6&frac12;&Prime; high, narrower in bay 2) and one at the breakfast room on the porch side; positions are approximate. Interior doors are drawn swinging into the room they serve; their positions are approximate. The operable windows over planters at each end are drawn in outline. The carport (15), at the upper level, is drawn as printed, with its piers. Bay assignments are read from the printed plan. The drawing is scaled from the bay width (10&prime;-0&Prime;) and traced by eye, so it is proportional but approximate, not a measured drawing. The car is a 16-foot outline at that scale; the stair run and the carport edges are estimates.</p>
+    </div>
+
+    <div class="col">
+    <p>Read this way, the plan has two halves. The four bays on the right each hold one bedroom and one service room, the same unit four times. The four on the left each hold something different: family room and kitchen, dining and breakfast rooms, living room and foyer, then living room again.</p>
+    </div>
+
+    <figure>
+      <img src="media/ostinato/section.jpg" width="1800" height="1012" loading="lazy" decoding="async" alt="The model cut through its hillside, with the carport at the upper level and the house stepping down below">
+      <figcaption>The model cut through the hillside: carport at the upper level, the house stepping down.</figcaption>
+    </figure>
+
+    <figure>
+      <video controls controlsList="nodownload noremoteplayback" disablePictureInPicture oncontextmenu="return false" muted playsinline preload="metadata" poster="media/thumbs/ostinato-analysis-poster.jpg" aria-describedby="c2">
+        <source src="media/ostinato-analysis.mp4" type="video/mp4">
+      </video>
+      <figcaption id="c2">Aerial, plan and elevation views of the model. 28 seconds.</figcaption>
+    </figure>
+
+    <h2>Form: Head, Solos, Head</h2>
+    <div class="col">
+    <p>A jazz performance opens with the head, the tune as written. Players then take solos, improvising over the same structure. The performance closes with the head again. The head of <em>Take Five</em> is itself in ABA form: a theme (A), a contrasting section (B), then A returns.</p>
+    <p>The house reads the same way. Its two ends are similar, and the middle changes with the use of each module, as the floor plan shows. A tune is heard in time and a house is read in space, so the link between them is movement: walking the house from one end to the other plays it like a form. That is what the walkthrough above does.</p>
+    </div>
+
+    <div class="pair">
+      <figure><img src="media/ostinato/elev-day.jpg" width="1800" height="1012" loading="lazy" decoding="async" alt="Long elevation of the house model at sunset, deck above slender piers"><figcaption>The long elevation of the model, by day.</figcaption></figure>
+      <figure><img src="media/ostinato/elev-night.jpg" width="1800" height="1012" loading="lazy" decoding="async" alt="The same elevation at night, the interior lit behind the glazing"><figcaption>The same elevation, by night.</figcaption></figure>
+    </div>
+
+    <div class="sheet formmap" id="formmap">
+      <h3>One Pass, Two Forms</h3>
+      <svg viewBox="0 0 600 190" role="img" aria-label="Schematic. Top: a jazz performance as head (A B A), solos, then head again. Bottom: the house as end A, varied middle, end A.">
+        <text x="0" y="14" class="lbl">MUSIC</text>
+        <g id="mus"></g>
+        <text x="0" y="104" class="lbl">HOUSE</text>
+        <g id="hou"></g>
+        <line id="ph" class="pl" x1="0" y1="22" x2="0" y2="172"/>
+      </svg>
+      <div class="ctl">
+        <label>Move through it <input id="scrub" type="range" min="0" max="1000" value="0" aria-label="Position in the form"></label>
+        <button id="auto" class="alt" type="button" aria-pressed="false">Play through</button>
+      </div>
+      <p id="where" aria-live="polite"></p>
+      <p class="cap">Schematic. Section lengths are not to scale, and the house row stands for the left and right elevations as read from the model.</p>
+    </div>
+
+    <h2>Views Along the Deck</h2>
+    <div class="pair">
+      <figure><img src="media/ostinato/facade.jpg" width="1800" height="1012" loading="lazy" decoding="async" alt="The deck side of the model, with a figure walking along the glazing"><figcaption>The deck side of the model.</figcaption></figure>
+      <figure><img src="media/ostinato/deck-dusk.jpg" width="1800" height="1012" loading="lazy" decoding="async" alt="The deck at dusk, light spilling from the glazing onto the boards"><figcaption>The deck at dusk.</figcaption></figure>
+    </div>
+    <div class="pair">
+      <figure><img src="media/ostinato/stair.jpg" width="1800" height="1012" loading="lazy" decoding="async" alt="A stair and diagonal steel member against the house wall, with a tree"><figcaption>Stair and steel.</figcaption></figure>
+      <figure><img src="media/ostinato/detail.jpg" width="1800" height="1012" loading="lazy" decoding="async" alt="Close view of the deck guard and glazing with a figure standing behind it"><figcaption>Close view of the deck and glazing.</figcaption></figure>
+    </div>
+
+    <h2>Why It Matters to Me</h2>
+    <div class="col">
+    <p>I trained as a jazz pianist before I trained in architecture, and this study is where the two met. It asks how a designer might use the tools of rhythm and form, repetition and variation, to organise space.</p>
+    <p>Thematic material is also simply pleasing, to the ear and to the eye. A motif that returns is a pleasure to hear, and a rhythm of frames, beams and shadows is a pleasure to look at. That shared pleasure is part of why music and architecture feel so close to me.</p>
+    </div>
+
+    <h2>Sources</h2>
+    <ul class="refs">
+      <li>All About Jazz. <a href="https://www.allaboutjazz.com/news/beverley-thorne-1924-2017" rel="noopener" target="_blank">&ldquo;Beverley Thorne (1924&ndash;2017).&rdquo;</a> Accessed October 14, 2026.<span class="n">Source for both Brubeck houses.</span></li>
+      <li><em>Arts &amp; Architecture</em>. &ldquo;Case Study House No. 26 by David Thorne, Architect.&rdquo; October 1962, and the completed house, January 1963. <a href="https://drive.google.com/file/d/0B3T8Zrap6yxyMUlYeUE0STlQVE0/view?usp=sharing" rel="noopener" target="_blank">Excerpts on Case Study House #26 (PDF)</a>, hosted by the current owners of the house through casestudyhouse.com. Accessed October 14, 2026.<span class="n">The primary source for the house. Pages from both issues are not reproduced here for copyright reasons.</span></li>
+      <li>Case Study House 26. <a href="https://www.casestudyhouse.com/" rel="noopener" target="_blank">casestudyhouse.com</a>. Accessed October 14, 2026.</li>
+      <li>Dave Brubeck Quartet. &ldquo;Take Five.&rdquo; Video on YouTube. Accessed October 14, 2026. <a href="https://www.youtube.com/watch?v=tT9Eh8wNMkw" rel="noopener" target="_blank">youtube.com/watch?v=tT9Eh8wNMkw</a>.<span class="n">The upload is not from the artist&rsquo;s own channel. The official upload is on <a href="https://www.youtube.com/watch?v=-DHuW1h1wHw" rel="noopener" target="_blank">Dave Brubeck&rsquo;s VEVO channel</a>.</span></li>
+      <li>Desmond, Paul. &ldquo;Take Five.&rdquo; In <em>The Real Book</em>, 420. Hal Leonard, 2007.</li>
+      <li>Docomomo US Northern California. <a href="https://www.docomomo-noca.org/beverley-d-thorne" rel="noopener" target="_blank">&ldquo;Beverley D. Thorne.&rdquo;</a> Accessed October 14, 2026.<span class="n">Source for the Oakland Brubeck house and the spelling of the architect&rsquo;s name.</span></li>
+      <li>Eckermann, Johann Peter. <a href="https://projekt-gutenberg.org/authors/johann-peter-eckermann/books/johann-peter-eckermann-gespraeche-mit-goethe/chapter/118" rel="noopener" target="_blank"><em>Gespr&auml;che mit Goethe</em></a>. Entry of March 23, 1829. Projekt Gutenberg-DE. Accessed October 14, 2026.<span class="n">Source of the quotation, in German.</span></li>
+      <li><em>House &amp; Home</em>. &ldquo;Three Prototype Designs Test a Rich Market.&rdquo; April 1963, 98&ndash;105. <a href="https://www.usmodernist.org/HH/HH-1963-04.pdf" rel="noopener" target="_blank">PDF</a>, USModernist Library. Accessed October 14, 2026.<span class="n">The house is the third example in the article, on pages 104&ndash;5.</span></li>
+    </ul>
+  </main>
+  <footer class="foot"><span>Steven Estafanos, Ottawa</span><span><a href="mailto:sestafanos@icloud.com">sestafanos@icloud.com</a> &middot; <a href="tel:+16138545877">+1 613 854 5877</a></span><span class="credit">&copy; 2026 Steven Estafanos. All work shown is by Steven Estafanos unless credited or noted otherwise.</span></footer>
+</div>
+<script>
+(function(){
+  var NS='http://www.w3.org/2000/svg';
+  function el(n,a,p,t){var e=document.createElementNS(NS,n);for(var k in a)e.setAttribute(k,a[k]);if(t!=null)e.textContent=t;if(p)p.appendChild(e);return e;}
+
+  /* ---- plan (coordinates follow the printed plan) ---- */
+  var F=[383,518,655,792,928,1065,1202,1338,1475];
+  var bayg=document.getElementById('bayg'),frames=document.getElementById('frames'),rooms=document.getElementById('rooms'),dims=document.getElementById('dims');
+  F.forEach(function(x,i){el('line',{class:'fr',x1:x,y1:44,x2:x,y2:604},frames);el('text',{class:'fn',x:x,y:38},frames,String(i+1));});
+  var BAYS=[
+    {w:'10′-1½″',use:['Family room (1)','Kitchen (2)'],door:'Operable window over a planter at the left end',tag:''},
+    {w:'10′-0″',use:['Dining room (3)','Breakfast room (5)'],door:'Breakfast room opens to the kitchen (2) through a wall opening',tag:''},
+    {w:'10′-0″',use:['Living room (4)','Foyer (6)'],door:'Entry: sliding door into the foyer',tag:''},
+    {w:'10′-0″',use:['Living room (4)'],door:'Sliding door to the lower deck; a stair leaves the carport, two steps east and then north',tag:''},
+    {w:'10′-0″',use:['Bedroom (7)','Bathroom (14)'],tag:'Repeats: a bedroom and a service room'},
+    {w:'10′-0″',use:['Bedroom (8)','Utility room (13)'],door:'Swing door to the lower deck',tag:'Repeats: a bedroom and a service room'},
+    {w:'10′-0″',use:['Bedroom (9)','Bathroom (12)'],tag:'Repeats: a bedroom and a service room'},
+    {w:'10′-1½″',use:['Master bedroom (10)','Dressing room (11)'],door:'Operable window over a planter at the right end',tag:'Repeats: a bedroom and a service room'}
+  ];
+  var bayEls=[],btns=[],btnWrap=document.getElementById('baybtns'),readout=document.getElementById('readout');
+  BAYS.forEach(function(b,i){
+    var r=el('rect',{class:'bay',x:F[i],y:44,width:F[i+1]-F[i],height:560,'aria-hidden':'true'},bayg);
+    r.addEventListener('click',function(){stopPlay();selectBay(i);});bayEls.push(r);
+    el('text',{x:(F[i]+F[i+1])/2,y:-12},dims,b.w);
+    var bt=document.createElement('button');bt.type='button';bt.textContent=String(i+1);bt.setAttribute('aria-pressed','false');bt.setAttribute('aria-label','Bay '+(i+1));
+    bt.addEventListener('click',function(){stopPlay();selectBay(i);});btnWrap.appendChild(bt);btns.push(bt);
+  });
+  /* dimension chains with architectural ticks */
+  var dg=el('g',{class:'dim'},dims);
+  function tick(x,y){el('line',{class:'tk',x1:x-7,y1:y+7,x2:x+7,y2:y-7},dg);}
+  el('line',{x1:F[0],y1:-4,x2:F[8],y2:-4},dg);F.forEach(function(x){el('line',{x1:x,y1:-14,x2:x,y2:22},dg);tick(x,-4);});
+  el('line',{x1:F[0],y1:-40,x2:F[8],y2:-40},dg);[F[0],F[8]].forEach(function(x){el('line',{x1:x,y1:-50,x2:x,y2:-14},dg);tick(x,-40);});
+  el('text',{x:(F[0]+F[8])/2,y:-48},dims,'80\u2032-3\u2033 between outer frames');
+  [['1',440,272],['2',418,426],['3',590,300],['4',792,300],['5',600,442],['6',738,478],['7',1010,262],['8',1131,260],['9',1272,260],['10',1418,258],['14',1066,492],['13',1176,494],['12',1303,490],['11',1430,458],['15',724,632]].forEach(function(r){el('text',{class:'rn',x:r[1],y:r[2]},rooms,r[0]);});
+  el('text',{x:724,y:654},rooms,'carport, upper level');el('text',{x:586,y:800},rooms,'car, for scale (16′)');el('text',{x:1074,y:664},rooms,'mechanical closet');el('text',{x:760,y:856},rooms,'stair');
+  function selectBay(i){
+    bayEls.forEach(function(e,k){e.classList.toggle('on',k===i);});
+    btns.forEach(function(e,k){e.setAttribute('aria-pressed',k===i?'true':'false');});
+    var b=BAYS[i];readout.innerHTML='<b>Bay '+(i+1)+', '+b.w+'</b><span>'+b.use.join(', ')+'</span>'+(b.door?'<span class="door">'+b.door+'</span>':'')+(b.tag?'<span>'+b.tag+'</span>':'');
+  }
+  readout.innerHTML='<span>Select a bay, or press play to step through them in order.</span>';
+
+  /* ---- audio: one bar of 5/4 per bay ---- */
+  var beatsEl=document.getElementById('beats'),cells=[];
+  for(var i=0;i<5;i++){var d=document.createElement('div');d.className='beat'+(i===0||i===3?' g1':'');d.innerHTML='<span>'+(i+1)+'</span><small>'+(i<3?'E♭ m':'B♭ m7')+'</small>';beatsEl.appendChild(d);cells.push(d);}
+  var ctx=null,playing=false,beat=0,bar=0,nextT=0,timer=null,tempo=168;
+  var tempoIn=document.getElementById('tempo'),tempoOut=document.getElementById('tempoOut'),btn=document.getElementById('play');
+  tempoIn.addEventListener('input',function(){tempo=+tempoIn.value;tempoOut.textContent=tempo;});
+  function tone(f,t,dur,type,gain){var o=ctx.createOscillator(),g=ctx.createGain();o.type=type;o.frequency.value=f;g.gain.setValueAtTime(0,t);g.gain.linearRampToValueAtTime(gain,t+.01);g.gain.exponentialRampToValueAtTime(.0001,t+dur);o.connect(g);g.connect(ctx.destination);o.start(t);o.stop(t+dur+.02);}
+  var EBM=[155.56,185.0,233.08],BBM7=[116.54,138.59,174.61,207.65];
+  function schedule(i,t,spb,barNo){
+    var accent=(i===0||i===3);
+    tone(accent?1800:1200,t,.04,'square',accent?.04:.02);
+    if(i===0){EBM.forEach(function(f){tone(f,t,spb*3*.95,'triangle',.07);});tone(77.78,t,spb*3*.9,'sine',.12);}
+    if(i===3){BBM7.forEach(function(f){tone(f,t,spb*2*.95,'triangle',.07);});tone(58.27,t,spb*2*.9,'sine',.12);}
+    var delay=Math.max(0,(t-ctx.currentTime)*1000);
+    setTimeout(function(){if(!playing)return;cells.forEach(function(c,k){c.classList.toggle('on',k===i);});if(i===0)selectBay(barNo%8);},delay);
+  }
+  function pump(){var spb=60/tempo;while(nextT<ctx.currentTime+.2){schedule(beat,nextT,spb,bar);nextT+=spb;beat++;if(beat===5){beat=0;bar++;}}}
+  function startPlay(){
+    try{ctx=ctx||new (window.AudioContext||window.webkitAudioContext)();if(ctx.state==='suspended')ctx.resume();}
+    catch(e){btn.textContent='Audio unavailable';return;}
+    playing=true;btn.textContent='Stop';btn.setAttribute('aria-pressed','true');beat=0;bar=0;nextT=ctx.currentTime+.08;timer=setInterval(pump,50);pump();
+  }
+  function stopPlay(){if(!playing)return;playing=false;btn.textContent='Play';btn.setAttribute('aria-pressed','false');clearInterval(timer);cells.forEach(function(c){c.classList.remove('on');});}
+  btn.addEventListener('click',function(){playing?stopPlay():startPlay();});
+
+  /* ---- form map ---- */
+  var W=600,mus=document.getElementById('mus'),hou=document.getElementById('hou');
+  function R(g,x,w,y,h,cls,label){
+    el('rect',{x:x,y:y,width:w,height:h,class:cls},g);
+    if(label)el('text',{x:x+w/2,y:y+h/2+4,'text-anchor':'middle',class:cls==='sA'?'ta':''},g,label);
+  }
+  [['A','sA',0,60],['B','sB',60,60],['A','sA',120,60],['solos','sS',180,240],['A','sA',420,60],['B','sB',480,60],['A','sA',540,60]].forEach(function(s){R(mus,s[2],s[3]-2,24,44,s[1],s[0]);});
+  function lb(g,x,y,s){el('text',{class:'lbl',x:x,y:y},g,s);}
+  lb(mus,0,84,'in head');lb(mus,180,84,'improvised solos');lb(mus,420,84,'out head');
+  R(hou,0,118,114,44,'sA','A');R(hou,120,360,114,44,'sM','');R(hou,482,118,114,44,'sA','A');
+  lb(hou,0,174,'left end');lb(hou,120,174,'middle bays: use varies');lb(hou,482,174,'right end');
+  var scrub=document.getElementById('scrub'),ph=document.getElementById('ph'),where=document.getElementById('where'),auto=document.getElementById('auto'),raf=null,t0=0;
+  function set(v){
+    var x=v/1000*W;ph.setAttribute('x1',x);ph.setAttribute('x2',x);
+    var s=x<60?'Head, A':x<120?'Head, B':x<180?'Head, A returns':x<420?'Solos':x<480?'Out head, A':x<540?'Out head, B':'Out head, A returns';
+    var h=x<118?'House: left end (A)':x<482?'House: middle, use varies':'House: right end (A again)';
+    where.textContent=s+'  |  '+h;
+  }
+  scrub.addEventListener('input',function(){set(+scrub.value);});set(0);
+  function step(ts){if(!t0)t0=ts;var v=Math.min(1000,(ts-t0)/12000*1000+(+scrub.dataset.start||0));scrub.value=v;set(v);if(v<1000)raf=requestAnimationFrame(step);else stopAuto();}
+  function stopAuto(){cancelAnimationFrame(raf);raf=null;t0=0;auto.textContent='Play through';auto.setAttribute('aria-pressed','false');}
+  auto.addEventListener('click',function(){if(raf){stopAuto();return;}if(+scrub.value>=1000)scrub.value=0;scrub.dataset.start=scrub.value;t0=0;auto.textContent='Stop';auto.setAttribute('aria-pressed','true');raf=requestAnimationFrame(step);});
+})();
+</script>
+<script>
+(function(){
+  var items=[].slice.call(document.querySelectorAll('figure img')),cur=0,last=null,x0=null,y0=null,t0=null;
+  var lb=document.createElement('div');lb.className='lb';lb.hidden=true;lb.setAttribute('role','dialog');lb.setAttribute('aria-modal','true');lb.setAttribute('aria-label','Gallery');
+  lb.innerHTML='<button type="button" class="lb-x" aria-label="Close">Close</button><button type="button" class="lb-n lb-p" aria-label="Previous">&#8249;</button><figure class="lb-f"><img alt=""><video controls controlsList="nodownload noremoteplayback" disablePictureInPicture playsinline preload="metadata" hidden></video><figcaption></figcaption></figure><button type="button" class="lb-n lb-nx" aria-label="Next">&#8250;</button>';
+  document.body.appendChild(lb);
+  var big=lb.querySelector('img'),vid=lb.querySelector('video'),cap=lb.querySelector('figcaption');
+  vid.addEventListener('contextmenu',function(e){e.preventDefault();});
+  function bw(){var p=big.parentNode;return p.classList&&p.classList.contains('wm')?p:big;}
+  function isVid(el){return el.tagName==='VIDEO';}
+  function src(el){if(isVid(el)){var s=el.querySelector('source');return s?s.getAttribute('src'):el.currentSrc;}return el.currentSrc||el.src;}
+  function stopVid(){try{vid.pause();}catch(e){}}
+  function show(i){
+    cur=(i+items.length)%items.length;var el=items[cur],fc=el.parentNode.querySelector('figcaption')||el.closest('figure').querySelector('figcaption');
+    stopVid();
+    if(isVid(el)){
+      bw().hidden=true;big.removeAttribute('src');vid.hidden=false;vid.poster=el.getAttribute('poster')||'';vid.src=src(el);vid.load();
+      var w=vid.parentNode;
+    }else{
+      vid.hidden=true;vid.removeAttribute('src');vid.load();bw().hidden=false;big.src=src(el);big.alt=el.alt;
+    }
+    cap.textContent=(cur+1)+' / '+items.length+(fc?'  —  '+fc.textContent:'');
+    [cur+1,cur-1].forEach(function(k){var n=items[(k+items.length)%items.length];if(!isVid(n)){var pre=new Image();pre.src=src(n);}});
+  }
+  function open(i){items.forEach(function(e){if(isVid(e))try{e.pause();}catch(x){}});last=items[i];show(i);lb.hidden=false;document.body.style.overflow='hidden';lb.querySelector('.lb-x').focus();}
+  function close(){stopVid();lb.hidden=true;big.removeAttribute('src');vid.removeAttribute('src');document.body.style.overflow='';if(last)try{last.focus();}catch(e){}}
+  items.forEach(function(el,i){
+    if(isVid(el)){
+      // inline videos play normally; a small button opens them in the slideshow
+      var b=document.createElement('button');b.type='button';b.className='lb-open';b.textContent='Slideshow';b.setAttribute('aria-label','Open in slideshow');
+      var f=el.closest('figure');f.style.position='relative';f.appendChild(b);
+      b.addEventListener('click',function(){open(i);});
+    }else{
+      el.tabIndex=0;el.setAttribute('role','button');el.title='Click to view as a slideshow';
+      el.addEventListener('click',function(){open(i);});
+      el.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();open(i);}});
+    }
+  });
+  lb.querySelector('.lb-x').addEventListener('click',close);
+  lb.querySelector('.lb-p').addEventListener('click',function(e){e.stopPropagation();show(cur-1);});
+  lb.querySelector('.lb-nx').addEventListener('click',function(e){e.stopPropagation();show(cur+1);});
+  // tap or click: left half goes back, right half goes forward; blank space to the side closes
+  big.addEventListener('click',function(e){var r=big.getBoundingClientRect();show(cur+((e.clientX-r.left)<r.width/2?-1:1));});
+  big.addEventListener('mousemove',function(e){var r=big.getBoundingClientRect();big.style.cursor=(e.clientX-r.left)<r.width/2?'w-resize':'e-resize';});
+  lb.addEventListener('click',function(e){if(e.target===lb||e.target.classList.contains('lb-f'))close();});
+  // swipe: finger moves left = next, right = previous (mostly horizontal, at least 50px)
+  lb.addEventListener('touchstart',function(e){
+    var t=e.touches[0];x0=t.clientX;y0=t.clientY;
+    if(e.target===vid){var r=vid.getBoundingClientRect();if(t.clientY>r.bottom-56)x0=null;}   // leave the video's own controls alone
+  },{passive:true});
+  lb.addEventListener('touchend',function(e){if(x0===null)return;var t=e.changedTouches[0],dx=t.clientX-x0,dy=t.clientY-y0;x0=null;
+    if(Math.abs(dx)>50&&Math.abs(dx)>Math.abs(dy)*1.3){lb._swiped=Date.now();show(cur+(dx<0?1:-1));}},{passive:true});
+  document.addEventListener('keydown',function(e){if(lb.hidden)return;if(e.key==='Escape')close();else if(e.key==='ArrowRight'){if(e.target===vid&&e.shiftKey)return;show(cur+1);}else if(e.key==='ArrowLeft')show(cur-1);});
+})();
+</script>
+</body>
+</html>
