@@ -171,6 +171,7 @@ figcaption,.cap{font:300 .78rem/1.5 var(--body);color:var(--mute);margin-top:10p
 
 
     <div class="col">
+    <p>I trained as a jazz pianist before I trained in architecture, and this study is where the two met. It asks how a designer might use the tools of rhythm and form, repetition and variation, to organise space.</p>
     <p>If architecture is frozen music, then music is liquid architecture, and a building and a tune should be able to be read against each other. This study tests that on one house and one piece of music. They are examples, not the only ones. Each was chosen because it shows the idea plainly.</p>
     <p class="def"><b>Ostinato:</b> a musical motif or phrase that persistently repeats in the same musical voice, frequently at the same pitch.</p>
     </div>
@@ -323,7 +324,6 @@ figcaption,.cap{font:300 .78rem/1.5 var(--body);color:var(--mute);margin-top:10p
 
     <h2>Why It Matters to Me</h2>
     <div class="col">
-    <p>I trained as a jazz pianist before I trained in architecture, and this study is where the two met. It asks how a designer might use the tools of rhythm and form, repetition and variation, to organise space.</p>
     <p>Thematic material is also simply pleasing, to the ear and to the eye. A motif that returns is a pleasure to hear, and a rhythm of frames, beams and shadows is a pleasure to look at. That shared pleasure is part of why music and architecture feel so close to me.</p>
     </div>
 
@@ -429,6 +429,14 @@ figcaption,.cap{font:300 .78rem/1.5 var(--body);color:var(--mute);margin-top:10p
   scrub.addEventListener('input',function(){set(+scrub.value);});set(0);
   function step(ts){if(!t0)t0=ts;var v=Math.min(1000,(ts-t0)/12000*1000+(+scrub.dataset.start||0));scrub.value=v;set(v);if(v<1000)raf=requestAnimationFrame(step);else stopAuto();}
   function stopAuto(){cancelAnimationFrame(raf);raf=null;t0=0;auto.textContent='Play through';auto.setAttribute('aria-pressed','false');}
+  /* pause sound and playhead when the demos are scrolled out of view or the tab is hidden */
+  function pauseAll(){stopPlay();if(raf)stopAuto();}
+  document.addEventListener('visibilitychange',function(){if(document.hidden)pauseAll();});
+  if('IntersectionObserver' in window){
+    var pl=document.getElementById('plan'),fm=document.getElementById('formmap');
+    if(pl)new IntersectionObserver(function(en){if(!en[0].isIntersecting)stopPlay();}).observe(pl.closest('.sheet')||pl);
+    if(fm)new IntersectionObserver(function(en){if(!en[0].isIntersecting&&raf)stopAuto();}).observe(fm);
+  }
   auto.addEventListener('click',function(){if(raf){stopAuto();return;}if(+scrub.value>=1000)scrub.value=0;scrub.dataset.start=scrub.value;t0=0;auto.textContent='Stop';auto.setAttribute('aria-pressed','true');raf=requestAnimationFrame(step);});
 })();
 </script>
