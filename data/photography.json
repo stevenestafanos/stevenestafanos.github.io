@@ -5,7 +5,8 @@
   "h": 2560,
   "caption": "Peace Tower, Centre Block, Parliament of Canada, Ottawa, ON",
   "date": "Sep 2015",
-  "alt": "Looking up at a stained-glass window and the carved stone vault of the Peace Tower interior, Centre Block"
+  "alt": "Looking up at a stained-glass window and the carved stone vault of the Peace Tower interior, Centre Block",
+  "row": "top"
  },
  {
   "src": "media/photography/01-vault.jpg",
@@ -13,7 +14,8 @@
   "h": 1707,
   "caption": "Notre-Dame Cathedral Basilica, Ottawa, ON",
   "date": "Oct 2015",
-  "alt": "Gothic vaulted ceiling with navy panels and gold ribs, photographed from below"
+  "alt": "Gothic vaulted ceiling with navy panels and gold ribs, photographed from below",
+  "row": "top"
  },
  {
   "src": "media/photography/29-nave.jpg",
@@ -21,7 +23,8 @@
   "h": 2560,
   "caption": "Notre-Dame Cathedral Basilica, Ottawa, ON",
   "date": "Oct 2015",
-  "alt": "Long nave seen down the central aisle, with a patterned tile floor, wooden pews and a blue vaulted ceiling picked out in gold"
+  "alt": "Long nave seen down the central aisle, with a patterned tile floor, wooden pews and a blue vaulted ceiling picked out in gold",
+  "row": "top"
  },
  {
   "src": "media/photography/06-turret.jpg",
@@ -29,7 +32,8 @@
   "h": 1707,
   "caption": "Château Laurier, Ottawa, ON",
   "date": "Apr 2015",
-  "alt": "Stone façade with a turret and steep roofs against a blue sky"
+  "alt": "Stone façade with a turret and steep roofs against a blue sky",
+  "row": "laurier"
  },
  {
   "src": "media/photography/17-corridor.jpg",
@@ -37,7 +41,8 @@
   "h": 2560,
   "caption": "Château Laurier, Ottawa, ON",
   "date": "Aug 2026",
-  "alt": "Vaulted, gilded corridor with a chandelier and patterned carpet"
+  "alt": "Vaulted, gilded corridor with a chandelier and patterned carpet",
+  "row": "laurier"
  },
  {
   "src": "media/photography/16-west-block.jpg",
@@ -45,7 +50,8 @@
   "h": 2560,
   "caption": "West Block, Parliament Hill, Ottawa, ON",
   "date": "Aug 2026",
-  "alt": "Glazed timber-and-steel atrium roof over a walkway between stone walls"
+  "alt": "Glazed timber-and-steel atrium roof over a walkway between stone walls",
+  "row": "laurier"
  },
  {
   "src": "media/photography/04-brick.jpg",
@@ -213,6 +219,14 @@
   "caption": "ByWard Market, Ottawa, ON",
   "date": "Aug 2026",
   "alt": "Long timber-and-steel roof over a market hall, seen from above"
+ },
+ {
+  "src": "media/photography/40-west-block-dusk.jpg",
+  "w": 2560,
+  "h": 1920,
+  "caption": "West Block, Parliament Hill, Ottawa, ON",
+  "date": "Nov 2026",
+  "alt": "Floodlit stone Gothic Revival block with a tall slate-roofed tower and a smaller gabled tower, seen across wet paving and lawn at dusk under a grey sky"
  },
  {
   "src": "media/photography/21-station.jpg",
