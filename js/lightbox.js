@@ -6,8 +6,10 @@
   lb.innerHTML='<button class="x" aria-label="Close">&times;</button><button class="p" aria-label="Previous">&larr;</button><button class="n" aria-label="Next">&rarr;</button><img alt=""><div class="cap"></div>';
   document.body.appendChild(lb);
   var img=lb.querySelector('img'), cap=lb.querySelector('.cap'), i=0, opener=null;
-  img.onload=function(){var d=window.devicePixelRatio||1;img.style.setProperty('--nw',img.naturalWidth/d+'px');img.style.setProperty('--nh',img.naturalHeight/d+'px');};
-  function show(k){ i=(k+figs.length)%figs.length; var b=figs[i]; img.style.removeProperty('--nw'); img.style.removeProperty('--nh'); img.src=b.getAttribute('data-full'); var i0=b.querySelector('img'); img.alt=i0?i0.alt:(b.getAttribute('aria-label')||'').replace('Enlarge: ',''); var c=b.closest('figure').querySelector('figcaption'); cap.textContent=c?c.textContent:''; }
+  function fit(){ if(!img.naturalWidth) return; var d=window.devicePixelRatio||1, nw=img.naturalWidth, nh=img.naturalHeight, r=lb.getBoundingClientRect(), aw=r.width-32, ah=r.height-32-(cap.offsetHeight||0)-12, s=Math.min(3/d, aw/nw, ah/nh); img.style.width=Math.round(nw*s)+'px'; img.style.height=Math.round(nh*s)+'px'; }
+  /* fills the viewport; small originals are enlarged up to 3x their natural CSS size instead of staying tiny */
+  img.onload=fit; window.addEventListener('resize',function(){ if(!lb.hidden) fit(); });
+  function show(k){ i=(k+figs.length)%figs.length; var b=figs[i]; img.style.width=''; img.style.height=''; img.src=b.getAttribute('data-full'); var i0=b.querySelector('img'); img.alt=i0?i0.alt:(b.getAttribute('aria-label')||'').replace('Enlarge: ',''); var c=b.closest('figure').querySelector('figcaption'); cap.textContent=c?c.textContent:''; }
   function open(k,b){ opener=b; show(k); lb.hidden=false; document.documentElement.style.overflow='hidden'; lb.querySelector('.x').focus(); }
   function close(){ lb.hidden=true; img.removeAttribute('src'); document.documentElement.style.overflow=''; if(opener) opener.focus(); }
   figs.forEach(function(b,k){ b.addEventListener('click',function(){ open(k,b); }); });
