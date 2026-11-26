@@ -7,7 +7,8 @@
 .crumb:hover{color:var(--ink)}
 .hero-fig{margin:0 0 1rem}
 .hero-fig img{width:100%;height:auto;display:block;background:var(--panel)}
-.hero-fig figcaption{color:var(--mute);font-size:.82rem;line-height:1.45;margin-top:10px;max-width:70ch}
+.hero-fig.fig{margin:0 0 1rem;gap:10px}
+.hero-fig figcaption{max-width:70ch}
 .facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,14rem),1fr));gap:24px;border-top:1px solid var(--rule);padding-top:20px;margin-top:2.4rem}
 .facts dt{font:400 .66rem/1.4 var(--body);letter-spacing:.18em;text-transform:uppercase;color:var(--mute)}
 .facts dd{margin:4px 0 0;font:400 1.1rem/1.35 var(--display)}
